@@ -1,7 +1,6 @@
-## ------------------------------------------
-## Functions for the AECM algorithm
-## space time seperable
-## ------------------------------------------
+## -----------------------------------------------------------
+## Functions for the AECM algorithm for implementing SS-FPCA
+## -----------------------------------------------------------
 
 
 library(sm)
