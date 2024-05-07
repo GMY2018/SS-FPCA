@@ -2,7 +2,7 @@
 ## Fitting the model using AECM algorithm
 ## -------------------------------------------
 
-## IMPLEMENTING THE SSFPCA
+## An example of applying SS-FPCA to Taruo Lake Chlorophyll data
 
 source('Functions_AECM_G.R')
 
