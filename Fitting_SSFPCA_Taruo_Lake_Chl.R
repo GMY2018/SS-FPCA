@@ -2,37 +2,6 @@
 ## Fitting the model using AECM algorithm
 ## -------------------------------------------
 
-## NOT RUN! FOR INFORMATION ONLY!
-# load('Taro_Lake_Chl.RData')
-# 
-# # Mask file
-# maskfile <- '00000383_reducedmask.tif'
-# mask  <- raster(maskfile)
-# 
-# # Log transfomation
-# Taro.arr[Taro.arr < 0.005] <- 0.005
-# logTaro.arr <- log(Taro.arr)
-# 
-# # Trimming
-# lon.trim <- Lon[8:110]
-# lat.trim <- Lat[10:54]
-# Taro.trim <- array(NA, dim=c(length(lon.trim), length(lat.trim), 101))
-# for (i in 1:101) {
-#   Taro.trim[,,i] <- t(Taro.arr[10:54, 8:110, i])
-# }
-# 
-# Taro.mean <- apply(Taro.trim[,,-1], MARGIN=3, FUN=mean, na.rm=T)
-# Taro.data <- apply(Taro.trim[,,-1], MARGIN=3, FUN=as.vector)
-# Taro.data <- Taro.data - matrix(rep(Taro.mean, each=nrow(Taro.data)), nrow=nrow(Taro.data), ncol=100)
-# 
-# mask.mat <- matrix(flip(mask, direction='y'), nrow=length(Lon), ncol=length(Lat))
-# mask.mat <- mask.mat[8:110, 10:54]
-# sum(mask.mat == 1, na.rm=T) / length(mask.mat)
-# # 94.43% data for the lake
-# # 84.97% data for the grid
-
-
-
 ## IMPLEMENTING THE SSFPCA
 
 source('Functions_AECM_G.R')
@@ -214,7 +183,7 @@ while ((abs((loglike1 - loglike0) / loglike0) > 0.0005)&&(loglike1 - loglike0 >=
 
 
 
-## Step 3: Keep the results
+## Step 3: Save the results
 AECM.sigma <- sigma
 AECM.Theta <- Theta
 
