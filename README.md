@@ -1,6 +1,6 @@
 # SS-FPCA
 
-Estimating functional principal components using a spatio-temporal random effect model. 
+Estimating functional principal components as part of a spatio-temporal random effect model. 
 
 With application to remote-sensing lake water quality data.
 
